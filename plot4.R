@@ -4,7 +4,7 @@ filename <- 'household_power_consumption.txt'
 DT <- fread(filename, skip = 66637, nrow = 2880)
 
 ## Add back the column names
-names(DT) <- names(fread(filename, nrow = 0))
+names(DT) <- names(fread(filename, header = TRUE, nrow = 0))
 
 ## Open png device
 png(filename = 'plot4.png', width = 480, height = 480)
