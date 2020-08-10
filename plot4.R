@@ -1,4 +1,6 @@
 ## Load the data for limited rows from file
+library(data.table)
+filename <- 'household_power_consumption.txt'
 DT <- fread(filename, skip = 66637, nrow = 2880)
 
 ## Add back the column names

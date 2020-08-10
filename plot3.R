@@ -1,8 +1,10 @@
 ## Load the data for limited rows from file
+library(data.table)
+filename <- 'household_power_consumption.txt'
 DT <- fread(filename, select = c(1, 2, 7, 8, 9), skip = 66637, nrow = 2880)
 
 ## Add back the column names
-names(DT) = c('Date', 'Time', 'Sub_metering_1', 'Sub_metering_2', 'Sub_metering_3')
+names(DT) <- c('Date', 'Time', 'Sub_metering_1', 'Sub_metering_2', 'Sub_metering_3')
 
 ## Open png device
 png(filename = 'plot3.png', width = 480, height = 480)
