@@ -27,7 +27,7 @@ with(DT, {
     plot(
         x = datetime, y = Voltage,
         type = 'l',
-        xlab = NA, ylab = 'Global Voltage Power',
+        xlab = 'datetime', ylab = 'Global Voltage Power',
     )
 
     ## Panel 3
@@ -45,7 +45,7 @@ with(DT, {
         x = datetime,
         y = Global_reactive_power,
         type = 'l',
-        xlab = NA,
+        xlab = 'datetime',
         ylab = 'Global_reactive_power',
     )
 })
